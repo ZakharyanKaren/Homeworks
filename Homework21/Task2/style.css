@@ -1,0 +1,118 @@
+body {
+  background-color: #c4f0ff;
+  margin: 0;
+}
+
+h1 {
+    color: rgb(255, 0, 225);
+}
+
+.container {
+  width: 50%;
+  margin: 100px auto 0;
+  text-align: center;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: #f9ff72;
+}
+
+.container-input {
+  display: flex;
+  width: 100%;
+}
+
+.container-input input {
+  width: 80%;
+  border: 1px solid  #ff00e1;
+  padding: 10px 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.container-input button, .remove-btn {
+  border: 1px solid  #ff00e1;
+  background-color: #f9ff72;
+  padding: 10px 0;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  color:  #ff00e1;
+  width: 20%;
+}
+
+.container-input button {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-left: none;
+}
+
+.remove-btn {
+  border-radius: 10px;
+}
+
+.container-input button:hover {
+    color: white;
+    border-color: #6eff8d;
+    background-color: #6eff8d;
+}
+
+.container-input button:active {
+    color: white;
+    border-color: #26ff55;
+    background-color: #26ff55;
+}
+
+.remove-btn:hover {
+    color: white;
+    border-color: #ff6e6e;
+    background-color: #ff6e6e;
+  }
+
+.remove-btn:active {
+  color: white;
+  border-color: #ff6e6e;
+  background-color: #ff4c4c;
+}
+
+.container-body {
+    text-align: left;
+    padding: 15px;
+}
+
+.container-remove {
+  margin-top: 10px;
+}
+
+.my-tasks {
+  padding: 5px;
+}
+
+.my-tasks p {
+  display: inline;
+  font-size: 16px;
+  margin: 0;
+}
+
+.task-icons {
+    float: right;
+}
+
+.task-icons i {
+    cursor: pointer;
+}
+
+.fa-check {
+    color: green;
+    margin-right: 10px;
+}
+
+.fa-edit {
+    color: blue;
+    margin-right: 10px;
+}
+
+.fa-times {
+    color: red;
+}

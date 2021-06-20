@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+
+    <!--icon fontawesome start-->
+    <script src="https://kit.fontawesome.com/d8d017f1a1.js" crossorigin="anonymous"></script>
+    <!--icon fontawesome end-->
+
+    <!--Font-Style start-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+    <!--Font-Style end-->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <form class="my-form" action="./index.html">
+            <label>Email :</label>
+            <input class="input-email" type="text" />
+            <p class="email-icon-wrapper"><i class="fas fa-exclamation-triangle my-icon"></i> Sorry, but that Email is
+                invalid
+            </p>
+            <label>Phone :</label>
+            <input class="input-phone" type="text" />
+            <p class="phone-icon-wrapper"><i class="fas fa-exclamation-triangle my-icon"></i> Sorry, but that Phone is
+                invalid
+            </p>
+
+            <button type="button" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <div class="my-modal">
+        <div class="modal-content">
+            <span class="close">Congrats! The task is resolved :)
+            </span>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
