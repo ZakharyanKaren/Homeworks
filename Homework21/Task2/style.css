@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-    color: rgb(255, 0, 225);
+  color: rgb(255, 0, 225);
 }
 
 .container {
@@ -23,7 +23,7 @@ h1 {
 
 .container-input input {
   width: 80%;
-  border: 1px solid  #ff00e1;
+  border: 1px solid #ff00e1;
   padding: 10px 20px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -31,14 +31,15 @@ h1 {
   outline: none;
 }
 
-.container-input button, .remove-btn {
-  border: 1px solid  #ff00e1;
+.container-input button,
+.remove-btn {
+  border: 1px solid #ff00e1;
   background-color: #f9ff72;
   padding: 10px 0;
   font-size: 16px;
   outline: none;
   cursor: pointer;
-  color:  #ff00e1;
+  color: #ff00e1;
   width: 20%;
 }
 
@@ -53,22 +54,22 @@ h1 {
 }
 
 .container-input button:hover {
-    color: white;
-    border-color: #6eff8d;
-    background-color: #6eff8d;
+  color: white;
+  border-color: #6eff8d;
+  background-color: #6eff8d;
 }
 
 .container-input button:active {
-    color: white;
-    border-color: #26ff55;
-    background-color: #26ff55;
+  color: white;
+  border-color: #26ff55;
+  background-color: #26ff55;
 }
 
 .remove-btn:hover {
-    color: white;
-    border-color: #ff6e6e;
-    background-color: #ff6e6e;
-  }
+  color: white;
+  border-color: #ff6e6e;
+  background-color: #ff6e6e;
+}
 
 .remove-btn:active {
   color: white;
@@ -93,18 +94,6 @@ h1 {
   padding: 15px 0;
 }
 
-.my-tasks input {
-  display: inline;
-  font-size: 16px;
-  margin: 0;
-  outline: none;
-  border: none;
-  background-color: inherit;
-  width: 80%;
-  padding: 5px 0;
-  margin-left: 5px;
-}
-
 .iconBtnDiv {
   display: flex;
   justify-content: space-evenly;
@@ -113,26 +102,35 @@ h1 {
 }
 
 .iconBtnDiv button {
-    cursor: pointer;
-    background-color: inherit;
-    border: none;
-    padding: 0;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  padding: 0;
 }
 
 .task-input {
+  width: 80%;
   border-radius: 7px;
+  display: inline;
+  font-size: 16px;
+  margin: 0;
+  outline: none;
+  border: none;
+  background-color: inherit;
+  padding: 5px 0 5px 10px;
+  margin-left: 5px;
 }
 
 .fa-check {
-    color: green;
-    margin-right: 10px;
+  color: green;
+  margin-right: 10px;
 }
 
 .fa-edit {
-    color: blue;
-    margin-right: 10px;
+  color: blue;
+  margin-right: 10px;
 }
 
 .fa-times {
-    color: red;
+  color: red;
 }
