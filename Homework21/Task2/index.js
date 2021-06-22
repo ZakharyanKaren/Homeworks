@@ -6,33 +6,50 @@ const removeBtn = document.querySelector(".remove-btn");
 addBtn.addEventListener("click", () => {
   if (input.value) {
     const div = document.createElement("div");
-    const iconsDiv = document.createElement("div");
-    const p = document.createElement("p");
+    const taskInput = document.createElement("input");
+    const iconBtnDiv = document.createElement("div");
+    const iconBtnCheck = document.createElement("button");
+    const iconBtnEdit = document.createElement("button");
+    const iconBtnRemove = document.createElement("button");
+    const checkIcon = document.createElement("i");
+    const editIcon = document.createElement("i");
     const removeIcon = document.createElement("i");
-    removeIcon.classList.add("remove-icon", "fas", "fa-times");
 
     div.classList.add("my-tasks");
-    iconsDiv.classList.add("task-icons");
+    taskInput.readOnly = "true";
+    taskInput.classList.add("task-input");
+    iconBtnDiv.classList.add("iconBtnDiv");
+    checkIcon.classList.add("submit-icon", "fas", "fa-check");
+    editIcon.classList.add("edit-icon", "fas", "fa-edit");
+    removeIcon.classList.add("remove-icon", "fas", "fa-times");
 
-    iconsDiv.insertAdjacentHTML(
-      "beforeend",
-      `<i class="submit-icon fas fa-check"></i>
-       <i class="edit-icon fas fa-edit"></i>`
-    );
-    iconsDiv.append(removeIcon);
-    p.append(input.value);
-    div.append(p);
-    div.append(iconsDiv);
+    iconBtnCheck.append(checkIcon);
+    iconBtnEdit.append(editIcon);
+    iconBtnRemove.append(removeIcon);
+
+    iconBtnDiv.append(iconBtnCheck);
+    iconBtnDiv.append(iconBtnEdit);
+    iconBtnDiv.append(iconBtnRemove);
+
+    taskInput.value = input.value;
+    div.append(taskInput);
+    div.append(iconBtnDiv);
     container.append(div);
 
     input.value = "";
 
-    removeIcon.addEventListener("click", (event) => {
+    checkIcon.addEventListener("click", () => {
+      taskInput.readOnly = "true";
+      taskInput.style.border = "none";
+    });
+
+    iconBtnEdit.addEventListener("click", () => {
+      taskInput.readOnly = "";
+      taskInput.style.border = "1px solid #ff00e1";
+    });
+
+    iconBtnRemove.addEventListener("click", () => {
       div.remove();
     });
   }
-});
-
-removeBtn.addEventListener("click", () => {
-  container.textContent = "";
 });
