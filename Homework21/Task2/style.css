@@ -106,6 +106,7 @@ h1 {
   background-color: inherit;
   border: none;
   padding: 0;
+  width: 15px;
 }
 
 .task-input {
@@ -121,16 +122,17 @@ h1 {
   margin-left: 5px;
 }
 
-.fa-check {
+.submit-icon {
   color: green;
-  margin-right: 10px;
+  width: 100%;
 }
 
-.fa-edit {
+.edit-icon {
   color: blue;
-  margin-right: 10px;
+  width: 100%;
 }
 
-.fa-times {
+.remove-icon {
   color: red;
+  width: 100%;
 }

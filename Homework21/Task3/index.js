@@ -1,23 +1,32 @@
-var slideIndex = [1, 1];
-var slideId = ["mySlides1", "mySlides2"];
-showSlides(1, 0);
-showSlides(1, 1);
+let slideIndex = 1;
+showSlides(slideIndex);
 
-function plusSlides(n, no) {
-  showSlides((slideIndex[no] += n), no);
+function plusSlides(n) {
+  showSlides((slideIndex += n));
 }
 
-function showSlides(n, no) {
-  var i;
-  var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {
-    slideIndex[no] = 1;
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let slides = document.querySelectorAll("img");
+  let dots = document.querySelectorAll("span");
+
+  if (n > slides.length) {
+    slideIndex = 1;
   }
   if (n < 1) {
-    slideIndex[no] = x.length;
+    slideIndex = slides.length;
   }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  x[slideIndex[no] - 1].style.display = "block";
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }

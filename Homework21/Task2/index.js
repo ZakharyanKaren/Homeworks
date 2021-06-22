@@ -1,9 +1,8 @@
 const input = document.querySelector(".my-input");
-const addBtn = document.querySelector(".add-btn");
 const container = document.querySelector(".container-body");
 const removeBtn = document.querySelector(".remove-btn");
 
-addBtn.addEventListener("click", () => {
+function addTaskFunction() {
   if (input.value) {
     const div = document.createElement("div");
     const taskInput = document.createElement("input");
@@ -52,4 +51,8 @@ addBtn.addEventListener("click", () => {
       div.remove();
     });
   }
-});
+}
+
+function allTaskRemove() {
+  container.textContent = "";
+}
