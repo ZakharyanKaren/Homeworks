@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+
+    <link rel="stylesheet" href='./style.css'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="set-timeout">
+            <div>
+                <label>Hours: </label>
+                <input class="hours" type="number">
+            </div>
+            <div>
+                <label>Minutes: </label>
+                <input class="minutes" type="number">
+            </div>
+            <div>
+                <label>Seconds: </label>
+                <input class="seconds" type="number">
+            </div>            
+        </div>
+        <div class="submit-btns">
+            <div>
+                <button class="stop-play-btn">Stop</button>
+            </div>
+            <div>
+                <button class="start-btn" onclick='startTimer()'>Start</button>
+            </div>
+            <div>
+                <button class="reset-btn">reset</button>
+            </div>        
+        </div>
+        <div class="output">
+
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

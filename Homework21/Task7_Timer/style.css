@@ -1,0 +1,76 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.set-timeout {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 5fr 2fr 5fr;
+}
+.set-timeout :first-child {
+  justify-self: end;
+}
+.set-timeout :nth-child(2) {
+  justify-self: center;
+}
+.set-timeout :last-child {
+  justify-self: start;
+}
+.set-timeout label {
+  margin: 0 5px;
+}
+
+.set-timeout input {
+  width: 40px;
+}
+
+.submit-btns {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 5fr 2fr 5fr;
+}
+
+.submit-btns button {
+  padding: 5px 20px;
+}
+
+.submit-btns :first-child {
+  justify-self: end;
+}
+.submit-btns :nth-child(2) {
+  justify-self: center;
+}
+.submit-btns :last-child {
+  justify-self: start;
+}
+
+.output {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.stop-play-btn {
+  background-color: blue;
+}
+
+.start-btn {
+  background-color: green;
+}
+
+.reset-btn {
+  background-color: red;
+}
+
+.stop-play-btn,
+.start-btn,
+.reset-btn {
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  color: white;
+}
