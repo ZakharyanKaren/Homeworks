@@ -2,21 +2,26 @@ const hours = document.querySelector(".hours");
 const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 const output = document.querySelector(".output");
+
+const startBtn = document.querySelector(".start-btn");
 const stopPlayBtn = document.querySelector(".stop-play-btn");
 const resetBtn = document.querySelector(".reset-btn");
 
 let isPaused = false;
 let timerId;
 
-function startTimer() {
+startBtn.onclick = () => {
   let h = hours.value;
   let m = minutes.value;
   let s = seconds.value;
 
-  isPaused = false;
-
-  stopPlayBtn.innerText = "Stop";
-  stopPlayBtn.style.backgroundColor = "blue";
+  if (
+    hours.value !== "" ||
+    minutes.value !== "" ||
+    (seconds.value !== "" && timerId)
+  ) {
+    clearInterval(timerId);
+  }
 
   if (s !== "" || m !== "" || h !== "") {
     if (s < 10) {
@@ -72,7 +77,7 @@ function startTimer() {
     minutes.value = "";
     seconds.value = "";
   }
-}
+};
 
 resetBtn.onclick = () => {
   output.innerText = "";
@@ -82,12 +87,12 @@ resetBtn.onclick = () => {
 stopPlayBtn.onclick = () => {
   if (isPaused) {
     stopPlayBtn.innerText = "Stop";
-    stopPlayBtn.style.backgroundColor = "blue";
+    stopPlayBtn.style.backgroundColor = "rgb(0, 162, 255)";
 
     isPaused = !isPaused;
   } else {
     stopPlayBtn.innerText = "Play";
-    stopPlayBtn.style.backgroundColor = "green";
+    stopPlayBtn.style.backgroundColor = "rgb(123, 221, 42)";
     isPaused = !isPaused;
   }
 };

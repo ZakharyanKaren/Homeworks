@@ -1,76 +1,66 @@
+body {
+  margin: 0;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  display: inherit;
   flex-direction: column;
+  width: 400px;
+  background-color: #ffcf00;
+  border-radius: 25px;
+  padding: 50px;
 }
 
 .set-timeout {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  display: grid;
-  grid-template-columns: 5fr 2fr 5fr;
-}
-.set-timeout :first-child {
-  justify-self: end;
-}
-.set-timeout :nth-child(2) {
-  justify-self: center;
-}
-.set-timeout :last-child {
-  justify-self: start;
-}
-.set-timeout label {
-  margin: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
 }
 
-.set-timeout input {
-  width: 40px;
+.hours, .minutes, .seconds {
+  width: 50px;
+  padding: 5px 0px 5px 5px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
 }
 
 .submit-btns {
-  margin-top: 15px;
-  display: grid;
-  grid-template-columns: 5fr 2fr 5fr;
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-evenly;
 }
 
 .submit-btns button {
+  font-weight: bold;
   padding: 5px 20px;
-}
-
-.submit-btns :first-child {
-  justify-self: end;
-}
-.submit-btns :nth-child(2) {
-  justify-self: center;
-}
-.submit-btns :last-child {
-  justify-self: start;
-}
-
-.output {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 50px;
-}
-
-.stop-play-btn {
-  background-color: blue;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
 }
 
 .start-btn {
-  background-color: green;
+  background-color: rgb(123, 221, 42);
+}
+
+.stop-play-btn {
+  background-color: rgb(0, 162, 255);
 }
 
 .reset-btn {
-  background-color: red;
+  background-color: rgb(252, 42, 42);
 }
 
-.stop-play-btn,
-.start-btn,
-.reset-btn {
-  border-radius: 15px;
-  outline: none;
-  border: none;
-  color: white;
+.output {
+  min-height: 60px;
+  margin-top: 25px;
+  text-align: center;
+  font-size: 50px;
 }
