@@ -39,6 +39,7 @@ class Author {
       this._email = validateEmail(email);
     }
   }
+
   toString() {
     if (this.gender === "male") {
       return `Mr. ${this._name}`;

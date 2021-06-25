@@ -10,6 +10,7 @@ class CustomConsole {
     this.name = name;
     this.historyList = [];
   }
+
   log(value, ...args) {
     if (args.length === 0) {
       this.historyList.push(`${this.name}: ${JSON.stringify(value)}`);
@@ -19,9 +20,11 @@ class CustomConsole {
       return `${value} ${JSON.stringify(args)}`;
     }
   }
+
   history() {
     return this.historyList;
   }
+
   clearHistory() {
     return (this.historyList = []);
   }

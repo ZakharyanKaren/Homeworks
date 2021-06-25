@@ -27,6 +27,7 @@ Invalid! - ${word} has already been said`;
       return this.words;
     }
   }
+
   restart() {
     this.words = [];
     this.game_over = false;

@@ -29,6 +29,7 @@ class Person {
   set age(age) {
     this._age = age;
   }
+
   toString() {
     return `${this._firstName} ${this._lastName}, ${this._age} years old`;
   }
@@ -75,6 +76,7 @@ class Student extends Person {
       this._year += 1;
     }
   }
+
   isAllPassed() {
     for (const iterator of this._programs) {
       if (iterator.grade < 50) {
@@ -83,6 +85,7 @@ class Student extends Person {
     }
     return true;
   }
+
   toString() {
     return this.firstName;
   }

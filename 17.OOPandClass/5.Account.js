@@ -24,10 +24,12 @@ class Account {
     }
     this._balance = balance;
   }
+
   credit(amount) {
     this._balance += amount;
     return this._balance;
   }
+
   debit(amount) {
     if (this._balance < amount) {
       throw new Error("Amount exceeded balance.");
@@ -35,6 +37,7 @@ class Account {
     this._balance -= amount;
     return this._balance;
   }
+
   transferTo(anotherAccount, amount) {
     if (this._balance < amount) {
       throw new Error("Amount exceeded balance.");
@@ -43,9 +46,11 @@ class Account {
     anotherAccount.credit(amount);
     return this._balance;
   }
+
   static identifyAccounts(accountFirst, accountSecond) {
     return accountFirst.id === accountSecond.id;
   }
+
   toString() {
     return `${this._name}'s account balance is $${this._balance}`;
   }

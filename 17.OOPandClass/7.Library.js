@@ -12,9 +12,11 @@ class Book {
   get author() {
     return this._author;
   }
+
   toString() {
     return `${this._title}, ${this._author}`;
   }
+
   isTheSameBook(book) {
     if (book.title === this._title && book.author === this._author) {
       return true;
@@ -31,6 +33,7 @@ class LibraryBookBase extends Book {
   get bookId() {
     return this._bookId;
   }
+
   toString() {
     return `${this.toString}, ${this._bookId}`;
   }
@@ -47,12 +50,15 @@ class LibraryBook extends LibraryBookBase {
   set quantity(quantity) {
     this._quantity = quantity;
   }
+
   toString() {
     return `${this.toString}, ${this._quantity}`;
   }
+
   increaseQuantityBy(amount) {
     this._quantity += amount;
   }
+
   increaseQuantityBy(amount) {
     this._quantity -= amount;
   }
@@ -76,6 +82,7 @@ class ReaderBook extends LibraryBookBase {
   set isReturned(isReturned) {
     this._isReturned = isReturned;
   }
+
   toString() {
     return `${this.toString()}, ${this._expirationDate}, ${this._isReturned}`;
   }
@@ -106,9 +113,11 @@ class Reader {
   get readerId() {
     return this._readerId;
   }
+
   toString() {
     return `${this._firstName}, ${this._lastName}, ${this._books}, ${this._readerId}`;
   }
+
   borrowBook(book, library) {
     if (library.lendBook(book, this._readerId) !== null) {
       this._books.push(book);
@@ -127,6 +136,7 @@ class Library {
   get readers() {
     return this._readersArray;
   }
+
   doHaveBook(requestedBook) {
     for (const iter of this._booksArray) {
       if (
@@ -139,6 +149,7 @@ class Library {
     }
     return false;
   }
+
   addBook(newBook) {
     if (this.doHaveBook(newBook)) {
       for (const iter of this._booksArray) {
@@ -167,6 +178,7 @@ class Library {
     }
     return this._booksArray;
   }
+
   checkReaderId(readerId) {
     for (const iter of this._readersArray) {
       if (iter.readerId === readerId) {
@@ -175,6 +187,7 @@ class Library {
     }
     return false;
   }
+
   lendBook(book, readerId) {
     if (this.checkReaderId(readerId)) {
       for (const iter of this._booksArray) {
