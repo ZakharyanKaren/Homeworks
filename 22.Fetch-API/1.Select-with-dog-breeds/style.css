@@ -1,0 +1,10 @@
+div {
+  width: 100%;
+}
+
+select {
+  display: block;
+  width: 230px;
+  margin: 0 auto;
+  padding: 5px 2px;
+}
