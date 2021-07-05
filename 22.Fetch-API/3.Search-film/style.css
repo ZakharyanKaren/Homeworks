@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-size: 22px;
+  color: #ff00b1;
+}
+
+.container {
+  width: 50%;
+  margin: 50px auto 0;
+  text-align: left;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: #f9ff72;
+}
+
+.container div {
+  display: flex;
+}
+
+.title p:first-child, .description p:first-child, .director p:first-child, .producer p:first-child, .release-date p:first-child {
+  width: 25%;
+}
